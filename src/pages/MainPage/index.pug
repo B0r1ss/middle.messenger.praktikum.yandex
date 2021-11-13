@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="shortcut icon" href="favicon.ico")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    title Pigeon
+  body
+    div.page
+      header.header
+        a.header__logo-link(href="#content" target="_blank")
+          img.header__logo(src="<%=require('./images/header-logo.svg')%>" alt="логотип")
+
+      main.content
+        aside.sidebar
+          a.sidebar__profileLink(href="profile.html") Профиль
+            span.material-icons chevron_right
+          input.sidebar__searchForm(type="text")
+          ul.sidebar__list
+            li.sidebar__listItem
+              img(src="", alt="Аватар")
+              .sidebar__userSection
+                h4.sidebar__userName 
+                p.sidebar__userMassage 
+              .sidebar__massageAttr
+                p.siadebar__time
+                .sidebar__valMess
+        .chart
+          h3.chart_empty Выберите чат чтобы отправить сообщение
+          .chart__header
+            img.chart__avatar(src="", alt="")
+            h4.chart__username
+            button.chart__buttonMore
+          .chart__meetingRoom
+            p.chart__massDate
+            ul.chart__messages
+              li.chart__message
+              li.chart__message
+              li.chart__message
+          .chart__footer
+            button.chart__addButton 
+            input.chart__inputMessage(type="text")
+            button.chart__sendButton
