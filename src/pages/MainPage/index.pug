@@ -3,34 +3,37 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-
-    link(rel="shortcut icon" href="favicon.ico")
+    link(rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png")
+    link(rel="mask-icon" href="../../images/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
+    link(rel="shortcut icon" href="../../images/favicon.ico")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     title Pigeon
   body
     div.page
-      header.header
-        a.header__logo-link(href="#content" target="_blank")
-          img.header__logo(src="<%=require('./images/header-logo.svg')%>" alt="логотип")
-
       main.content
         aside.sidebar
-          a.sidebar__profileLink(href="profile.html") Профиль
-            span.material-icons chevron_right
-          input.sidebar__searchForm(type="text")
+          a.sidebar__profileLink(href="#") Профиль
+            span.material-icons.sidebar__profileLink_icon chevron_right
+          input.sidebar__searchInput(type="text" placeholder="Поиск")
+          - var n = 0
           ul.sidebar__list
-            li.sidebar__listItem
-              img(src="", alt="Аватар")
-              .sidebar__userSection
-                h4.sidebar__userName 
-                p.sidebar__userMassage 
-              .sidebar__massageAttr
-                p.siadebar__time
-                .sidebar__valMess
+            while n < 15
+              li.sidebar__listItem= n++
+                img.sidebar__userImage(src="../../images/avatar.svg", alt="Аватар автора")
+                .sidebar__userSection
+                  h4.sidebar__userName Андрей
+                  p.sidebar__userMassage Изображение
+                .sidebar__massageAttr
+                  p.siadebar__time 10:55
+                  .sidebar__countNewMessage 2
         .chart
           h3.chart_empty Выберите чат чтобы отправить сообщение
           .chart__header
-            img.chart__avatar(src="", alt="")
+            img.chart__avatar(src="../../images/avatar.svg", alt="Мой аватар")
             h4.chart__username
             button.chart__buttonMore
           .chart__meetingRoom
@@ -43,3 +46,4 @@ html(lang="ru")
             button.chart__addButton 
             input.chart__inputMessage(type="text")
             button.chart__sendButton
+    script(src='./index.js' type="module")

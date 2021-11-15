@@ -1,0 +1,152 @@
+@import url(../../vendor/fonts.css);
+@import url(../../vendor/normalize.css);
+
+$background_color: #FBFBFB;;
+$background_text_color: #999999;
+$main_text_color: #1E1E1E;
+$border_color: #EAEAEA;
+
+body {
+  background-color: $background_color;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.page {
+  max-width: 1280px;
+  min-width: 320px;
+  margin: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+.sidebar {
+  background-color: $background_color;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 27%;
+  height: 100vh;
+  border-right: solid 1px $border_color;
+}
+
+.sidebar__profileLink {
+  margin: 21px 10px 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+  color: $background_text_color;
+}
+
+.sidebar__profileLink_icon {
+  color: $background_text_color;
+}
+
+.sidebar__searchInput {
+  width: calc(100% - 10px*2);
+  margin: 23px 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #EFEFEF;
+
+  &::placeholder {
+    background-image: url(../../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: 30% center;
+    color: $background_text_color;
+    text-align: center;
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid #3d85f7;
+  }
+}
+
+.sidebar__list {
+  list-style: none;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__listItem {
+  display: flex;
+  flex-direction: row;
+  border-top: solid 1px $border_color;
+  content: none;
+}
+
+.sidebar__userImage {
+  margin: 12px 0;
+  border-radius: 100%;
+}
+
+.sidebar__userSection {
+
+}
+
+.sidebar__userName {
+  margin: 12px auto 0 10px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+  color: $main_text_color;
+}
+
+.sidebar__userMassage {
+  margin: 4px auto 0 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $background_text_color;
+}
+
+.sidebar__massageAttr {
+  margin: 12px 10px 12px auto;
+}
+
+.siadebar__time {
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  text-align: right;
+  color: $background_text_color;
+}
+
+.sidebar__countNewMessage {
+  box-sizing: border-box;
+  color: #FFFFFF;
+  background-color: #3369F3;
+  border-radius: 50%;
+  padding: 4px;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
