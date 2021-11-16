@@ -1,0 +1,21 @@
+@import url(../../vendor/fonts.css);
+@import url(../../vendor/normalize.css);
+@import "../../utills/variables";
+
+body {
+  background-color: $background_color;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.page {
+  background-color: $background_color;
+  min-width: 320px;
+  margin: auto auto auto 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}

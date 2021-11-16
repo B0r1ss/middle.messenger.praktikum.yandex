@@ -1,47 +1,22 @@
-@import url(../../vendor/fonts.css);
-@import url(../../vendor/normalize.css);
+@import "../../utills/variables";
+@import url(../../blocks/main/main.scss);
 
-$background_color: #FBFBFB;;
-$background_text_color: #999999;
-$main_text_color: #1E1E1E;
-$border_color: #EAEAEA;
-
-body {
-  background-color: $background_color;
-  font-family: "Inter", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.page {
-  max-width: 1280px;
-  min-width: 320px;
-  margin: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-}
-
-.sidebar {
-  background-color: $background_color;
+.content {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  height: 100vh;
-  overflow: auto;
+  flex-direction: row;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 27%;
+  min-width: 190px;
   height: 100vh;
   border-right: solid 1px $border_color;
+  overflow-y: scroll;
 }
 
 .sidebar__profileLink {
@@ -150,3 +125,155 @@ body {
   text-align: center;
 }
 
+.chart {
+  display: flex;
+  flex-direction: column;
+  width: 73%;
+  padding: 0 20px;
+}
+
+.chart_empty {
+  margin: auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: $background_text_color;
+}
+
+.chart__header {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  border-bottom: solid 1px $border_color;
+}
+
+.chart__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+.chart__username {
+  margin: auto auto auto 10px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+  color: $main_text_color;
+}
+
+.chart__buttonMore {
+  background: url('../../images/button-menu.svg') center no-repeat;
+  margin: auto 0;
+  height: 15px;
+  width: 3px;
+  border: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.chart__meetingRoom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.chart__massDate {
+  justify-self: center;
+  margin-top: 48px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: $background_text_color;
+}
+
+.chart__message {
+  justify-self: flex-start;
+  margin: 10px 0;
+  padding: 11px;
+  max-width: 380px;
+}
+
+.chart__img {
+  max-width: 320px;
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.chart__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $main_text_color;
+}
+.chart__time {
+  position: relative;
+  left: 95%;
+  bottom: 5%;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 9px;
+  color: $background_text_color;
+}
+
+.chart__footer {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  padding: 10px 20px;
+  border-top: solid 1px $border_color;
+}
+
+.chart__addButton {
+  background: url('../../images/button-add.svg') center no-repeat;
+  margin: auto 0;
+  height: 32px;
+  width: 32px;
+  border: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.chart__inputMessage {
+  margin: auto 0 auto 10px;
+  width: calc(100% - 60px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #EFEFEF;
+  text-align: left;
+  &:focus {
+    outline: none;
+    border: 1px solid #3d85f7;
+  }
+
+}
+
+.chart__sendButton {
+  background: url('../../images/button-send.svg') center no-repeat;
+  margin: auto 0 auto 10px;
+  height: 32px;
+  width: 32px;
+  border: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
