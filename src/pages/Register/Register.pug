@@ -3,10 +3,10 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="shortcut icon" href="favicon.ico")
+    link(rel='stylesheet', href='./Register.scss') 
     title Pigeon - Register
   body
-    div.page
+    .page
       section.login
         h2.login__title Регистрация
         form.login__form
@@ -17,6 +17,7 @@ html(lang="ru")
               name="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
+              placeholder="pochta@pochta.com"
             )
             span.login__error
 
@@ -26,6 +27,7 @@ html(lang="ru")
               name="login"
               required
               minLength="2"
+              placeholder="Mylogin"
             )
             span.login__error
 
@@ -34,6 +36,8 @@ html(lang="ru")
               type="text"
               name="name"
               required
+              placeholder="Иван"
+
             )
             span.login__error
 
@@ -42,6 +46,7 @@ html(lang="ru")
               type="text"
               name="lastname"
               required
+              placeholder="Иванов"
             )
             span.login__error
 
@@ -50,6 +55,7 @@ html(lang="ru")
               type="tel"
               name="phone"
               required
+              placeholder="+79111111111"
             )
             span.login__error
 
@@ -73,4 +79,4 @@ html(lang="ru")
 
           span.login__submit-error
           button.login__submit-button(type="submit") Зарегистрироваться 
-        a.login__subtitle Войти
+        a.login__subtitle(href="#") Войти

@@ -19,3 +19,12 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
 }
+
+a {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.6s;
+  &:hover {
+    opacity: .6;
+  }
+}
