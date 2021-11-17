@@ -12,12 +12,15 @@ html(lang="ru")
     meta(name="msapplication-TileColor" content="#da532c")
     meta(name="theme-color" content="#ffffff")
     link(rel="shortcut icon" href="../../images/favicon.ico")
-    link(rel='stylesheet', href='./Register.scss') 
-    title Pigeon - Register
+    link(rel='stylesheet', href='./Profile.scss') 
+    title Pigeon - Profile
   body
     .page
-      section.login
-        h2.login__title Регистрация
+      aside.profile__back
+        a.profile__backButton(href="../MainPage/MainPage.pug")
+      section.profile__main
+        image.profile__img
+        h2.profile__title Регистрация
         form.login__form
           fieldset.login__fields
             p.login__input-name Почта
@@ -27,6 +30,7 @@ html(lang="ru")
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
               placeholder="pochta@pochta.com"
+              disabled
             )
             span.login__error
 
@@ -37,15 +41,17 @@ html(lang="ru")
               required
               minLength="2"
               placeholder="Mylogin"
+              disabled
             )
             span.login__error
 
             p.login__input-name Имя
             input.login__input(
               type="text"
-              name="first_name"
+              name="name"
               required
               placeholder="Иван"
+              disabled
 
             )
             span.login__error
@@ -53,9 +59,10 @@ html(lang="ru")
             p.login__input-name Фамилия
             input.login__input(
               type="text"
-              name="second_name"
+              name="lastname"
               required
               placeholder="Иванов"
+              disabled
             )
             span.login__error
 
@@ -65,6 +72,7 @@ html(lang="ru")
               name="phone"
               required
               placeholder="+79111111111"
+              disabled 
             )
             span.login__error
 
@@ -74,18 +82,11 @@ html(lang="ru")
               name="password"
               required
               minLength="8"
-            )
-            span.login__error
-
-            p.login__input-name Пароль (еще раз)
-            input.login__input(
-              type="password"
-              name="passwordTw"
-              required
-              minLength="8"
+              disabled 
             )
             span.login__error
 
           span.login__submit-error
-          button.login__submit-button(type="submit") Зарегистрироваться 
-        a.login__subtitle(href="#") Войти
+          button.login__submit-button(type="submit") Изменить данные
+          button.login__submit-button(type="submit") Изменить пароль 
+          a.login__subtitle(href="#") Выйти

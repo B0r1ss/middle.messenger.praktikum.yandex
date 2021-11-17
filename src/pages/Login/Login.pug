@@ -14,7 +14,7 @@ html(lang="ru")
             p.login__input-name E-mail
             input.login__input(
               type="email"
-              name="email"
+              name="login"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
             )
@@ -29,4 +29,4 @@ html(lang="ru")
             span.login__error
           span.login__submit-error
           button.login__submit-button(type="submit") Войти
-        a.login__subtitle Нет аккаунта?
+        a.login__subtitle(href="../Register/Register.pug") Нет аккаунта?

@@ -56,7 +56,7 @@
 .login__input {
   border: none;
   margin: 8px 0 0;
-  border-bottom: 1px solid #3369F3;
+  border-bottom: 1px solid $style_main_color;
   padding-bottom: 7px;
   font-weight: 500;
   font-size: 13px;
@@ -75,7 +75,7 @@
   outline: none;
   cursor: pointer;
   transition: ease-out 0.5s;
-  background: #3369F3;
+  background: $style_main_color;
   border-radius: 8px;
   font-weight: 500;
   font-size: 13px;
@@ -95,7 +95,7 @@
   font-size: 11px;
   line-height: 11px;
   text-align: center;
-  color: #3369F3;
+  color: $style_main_color;
   opacity: 1;
   transition: opacity 0.3s;
   &:hover {
