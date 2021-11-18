@@ -1,5 +1,7 @@
-@import "../../utills/variables";
-@import url(../../blocks/main/main.scss);
+@import url(../../vendor/fonts.css);
+@import url(../../vendor/normalize.css);
+@import "../../utills/_variables.scss";
+@import "../../blocks/main/main.scss";
 
 .content {
   display: flex;
@@ -17,113 +19,111 @@
   height: 100vh;
   border-right: solid 1px $border_color;
   overflow-y: scroll;
-}
 
-.sidebar__profileLink {
-  margin: 21px 10px 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 12px;
-  text-align: right;
-  color: $background_text_color;
-}
-
-.sidebar__profileLink_icon {
-  color: $background_text_color;
-}
-
-.sidebar__searchInput {
-  width: calc(100% - 10px*2);
-  margin: 23px 10px 0;
-  padding: 10px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 5px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 12px;
-  background-color: #EFEFEF;
-
-  &::placeholder {
-    background-image: url(../../images/search.svg);
-    background-repeat: no-repeat;
-    background-position: 30% center;
+  &__profileLink {
+    margin: 21px 10px 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: right;
     color: $background_text_color;
+  }
+  
+  &__profileLink_icon {
+    color: $background_text_color;
+  }
+  
+  &__searchInput {
+    width: calc(100% - 10px*2);
+    margin: 23px 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: #EFEFEF;
+  
+    &::placeholder {
+      background-image: url(../../images/search.svg);
+      background-repeat: no-repeat;
+      background-position: 30% center;
+      color: $background_text_color;
+      text-align: center;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $style_main_color;
+    }
+  }
+  
+  &__list {
+    list-style: none;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__listItem {
+    display: flex;
+    flex-direction: row;
+    border-top: solid 1px $border_color;
+    content: none;
+  }
+  
+  &__userImage {
+    margin: 12px 0;
+    border-radius: 100%;
+  }
+
+  &__userName {
+    margin: 12px auto 0 10px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    color: $main_text_color;
+  }
+  
+  &__userMassage {
+    margin: 4px auto 0 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $background_text_color;
+  }
+  
+  &__massageAttr {
+    margin: 12px 10px 12px auto;
+  }
+  
+  &__time {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    text-align: right;
+    color: $background_text_color;
+  }
+  
+  &__countNewMessage {
+    box-sizing: border-box;
+    color: #FFFFFF;
+    background-color: $style_main_color;
+    border-radius: 50%;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
     text-align: center;
   }
-  &:focus {
-    outline: none;
-    border-bottom: 1px solid $style_main_color;
-  }
 }
 
-.sidebar__list {
-  list-style: none;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-}
 
-.sidebar__listItem {
-  display: flex;
-  flex-direction: row;
-  border-top: solid 1px $border_color;
-  content: none;
-}
-
-.sidebar__userImage {
-  margin: 12px 0;
-  border-radius: 100%;
-}
-
-.sidebar__userSection {
-
-}
-
-.sidebar__userName {
-  margin: 12px auto 0 10px;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 13px;
-  color: $main_text_color;
-}
-
-.sidebar__userMassage {
-  margin: 4px auto 0 10px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: $background_text_color;
-}
-
-.sidebar__massageAttr {
-  margin: 12px 10px 12px auto;
-}
-
-.siadebar__time {
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 13px;
-  text-align: right;
-  color: $background_text_color;
-}
-
-.sidebar__countNewMessage {
-  box-sizing: border-box;
-  color: #FFFFFF;
-  background-color: $style_main_color;
-  border-radius: 50%;
-  padding: 4px;
-  width: 20px;
-  height: 20px;
-  font-size: 11px;
-  text-align: center;
-}
 
 .chart {
   display: flex;

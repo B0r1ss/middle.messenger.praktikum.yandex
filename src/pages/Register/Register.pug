@@ -1,91 +1,82 @@
 <!DOCTYPE html>
 html(lang="ru")
   head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png")
-    link(rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png")
-    link(rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png")
-    link(rel="mask-icon" href="../../images/safari-pinned-tab.svg" color="#5bbad5")
-    meta(name="msapplication-TileColor" content="#da532c")
-    meta(name="theme-color" content="#ffffff")
-    link(rel="shortcut icon" href="../../images/favicon.ico")
+    include ../../components/Head/Head.pug
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel='stylesheet', href='./Register.scss') 
     title Pigeon - Register
   body
     .page
-      section.login
-        h2.login__title Регистрация
-        form.login__form
-          fieldset.login__fields
-            p.login__input-name Почта
-            input.login__input(
+      section.register 
+        h2.register__title Регистрация
+        form.register__form
+          fieldset.register__fields
+            p.register__input-name Почта
+            input.register__input(
               type="email"
               name="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
               placeholder="pochta@pochta.com"
             )
-            span.login__error
+            span.register__error
 
-            p.login__input-name Логин
-            input.login__input(
+            p.register__input-name Логин
+            input.register__input(
               type="text"
               name="login"
               required
               minLength="2"
               placeholder="Mylogin"
             )
-            span.login__error
+            span.register__error
 
-            p.login__input-name Имя
-            input.login__input(
+            p.register__input-name Имя
+            input.register__input(
               type="text"
               name="first_name"
               required
               placeholder="Иван"
 
             )
-            span.login__error
+            span.register__error
 
-            p.login__input-name Фамилия
-            input.login__input(
+            p.register__input-name Фамилия
+            input.register__input(
               type="text"
               name="second_name"
               required
               placeholder="Иванов"
             )
-            span.login__error
+            span.register__error
 
-            p.login__input-name Телефон
-            input.login__input(
+            p.register__input-name Телефон
+            input.register__input(
               type="tel"
               name="phone"
               required
               placeholder="+79111111111"
             )
-            span.login__error
+            span.register__error
 
-            p.login__input-name Пароль
-            input.login__input(
+            p.register__input-name Пароль
+            input.register__input(
               type="password"
               name="password"
               required
               minLength="8"
             )
-            span.login__error
+            span.register__error
 
-            p.login__input-name Пароль (еще раз)
-            input.login__input(
+            p.register__input-name Пароль (еще раз)
+            input.register__input(
               type="password"
               name="passwordTw"
               required
               minLength="8"
             )
-            span.login__error
+            span.register__error
 
-          span.login__submit-error
-          button.login__submit-button(type="submit") Зарегистрироваться 
-        a.login__subtitle(href="#") Войти
+          span.register__submit-error
+          button.register__submit-button(type="submit") Зарегистрироваться 
+        a.register__subtitle(href="../Login/Login.pug") Войти

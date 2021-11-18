@@ -1,5 +1,7 @@
-@import "../../utills/variables";
-@import url(../../blocks/main/main.scss);
+@import url(../../vendor/fonts.css);
+@import url(../../vendor/normalize.css);
+@import "../../utills/_variables.scss";
+@import "../../blocks/main/main.scss";
 
 .page {
   height: 100vh;
@@ -37,7 +39,7 @@
   font-size: 11px;
   line-height: 11px;
   text-align: center;
-  color: #3369F3;
+  color: $style_main_color;
   text-decoration: none;
   opacity: 1;
   transition: opacity .3s;

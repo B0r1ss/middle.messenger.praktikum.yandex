@@ -12,12 +12,6 @@
 
 ## Netlify
 
-- https://stupefied-nobel-c31678.netlify.app/ -авторизация
-- https://stupefied-nobel-c31678.netlify.app/sign-up - регистрация
-- https://stupefied-nobel-c31678.netlify.app/settings - профиль
-- https://stupefied-nobel-c31678.netlify.app/messenger - страница чатов
-- https://stupefied-nobel-c31678.netlify.app/500 - ошибка сервера
-- https://stupefied-nobel-c31678.netlify.app/any-other-url - 404
 
 ## Процесс
 ### Спринт №1
