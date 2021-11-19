@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel build src/pages/MainPage/index.pug && && node ./server.js",
+    "start": "parcel build src/pages/MainPage/index.pug && node ./server.js",
     "build": "parcel build src/pages/MainPage/index.pug -d docs --public-url ./",
-    "dev": "parcel src/pages/MainPage/index.pug --open"
+    "dev": "parcel src/index.pug --open"
   },
   "repository": {
     "type": "git",

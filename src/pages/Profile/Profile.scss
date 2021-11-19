@@ -1,12 +1,7 @@
-@import url(../../vendor/fonts.css);
-@import url(../../vendor/normalize.css);
-@import "../../utills/_variables.scss";
-@import "../../blocks/main/main.scss";
-
 .profile__avatar {
   width: 130px;
   height: 130px;
-  background-image: url("../../images/avatar.svg");
+  background-image: url("./images/avatar.svg");
   border: none;
   outline: none;
   border-radius: 50%;

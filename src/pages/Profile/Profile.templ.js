@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    include ../../components/Head/Head.pug
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    link(rel='stylesheet', href='./Profile.scss')
-    link(rel='stylesheet', href='../Register/Register.scss') 
-    title Pigeon - Profile
-  body
-    .page
+const Profile = `.page
       aside.profile__back
         a.profile__backButton(href="../MainPage/index.pug")
       section.register
@@ -91,4 +82,6 @@ html(lang="ru")
           span.register__submit-error
           button.register__submit-button(type="submit") Изменить данные
           button.register__submit-button(type="submit") Изменить пароль 
-          a.register__subtitle(href="#") Выйти
+          a.register__subtitle(href="#") Выйти`
+
+export default Profile
