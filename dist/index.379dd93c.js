@@ -44580,7 +44580,7 @@ const NotFound = `
   .container
     h1.error__digit 404
     h2.error__text Не туда попали
-    a.error__backRef(href="../MainPage/index.pug") назад к чатам`;
+    a.error__backRef(href="/chat") назад к чатам`;
 exports.default = NotFound;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"brY5Y":[function(require,module,exports) {
