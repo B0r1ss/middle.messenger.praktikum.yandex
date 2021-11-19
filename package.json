@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel build src/pages/MainPage/index.pug && node ./server.js",
-    "build": "parcel build src/pages/MainPage/index.pug -d docs --public-url ./",
+    "start": "parcel build src/index.pug && node ./server.js",
+    "build": "parcel build src/index.pug -d docs --public-url ./",
     "dev": "parcel src/index.pug --open"
   },
   "repository": {
