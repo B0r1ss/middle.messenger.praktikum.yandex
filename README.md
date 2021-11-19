@@ -1,3 +1,4 @@
+
 # Веб-приложение «Messenger Pigeon»
 
 ## Инструкция по развертыванию:
@@ -22,3 +23,6 @@
 - реализованы макеты страниц с помощью шаблонизатора
 - настроено dev-окружение с помощью NodeJS и Express для раздачи статики 
 - настроена раздача статики на Netlify
+
+https://github.com/B0r1ss/middle.messenger.praktikum.yandex/pull/1
+
