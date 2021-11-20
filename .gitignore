@@ -92,7 +92,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-
+.parcel-cache
 # Chutzpah Test files
 _Chutzpah*
 
@@ -360,6 +360,7 @@ MigrationBackup/
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store

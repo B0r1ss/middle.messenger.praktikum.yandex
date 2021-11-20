@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 html(lang="ru")
   head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="shortcut icon" href="favicon.ico")
+    include ../../components/Head/Head.pug
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel='stylesheet', href='../Register/Register.scss') 
     title Pigeon - Login
   body
     div.page
-      section.login
-        h2.login__title Рады видеть!
-        form.login__form
-          fieldset.login__fields
-            p.login__input-name E-mail
-            input.login__input(
+      section.register
+        h2.register__title Рады видеть!
+        form.register__form
+          fieldset.register__fields
+            p.register__input-name E-mail
+            input.register__input(
               type="email"
-              name="email"
+              name="login"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
             )
-            span.login__error
-            p.login__input-name Пароль
-            input.login__input(
+            span.register__error
+            p.register__input-name Пароль
+            input.register__input(
               type="password"
               name="password"
               required
               minLength="8"
             )
-            span.login__error
-          span.login__submit-error
-          button.login__submit-button(type="submit") Войти
-        a.login__subtitle Нет аккаунта?
+            span.register__error
+          span.register__submit-error
+          button.register__submit-button(type="submit") Войти
+        a.register__subtitle(href="../Register/Register.pug") Нет аккаунта?
