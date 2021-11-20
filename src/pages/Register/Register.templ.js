@@ -1,4 +1,4 @@
-const Register = `
+const RegisterTemplate = `
 .page
   section.register 
     h2.register__title Регистрация
@@ -74,4 +74,4 @@ const Register = `
       button.register__submit-button(type="submit") Зарегистрироваться 
     a.register__subtitle(href="../Login/Login.pug") Войти`
 
-    export default Register
+    export default RegisterTemplate;

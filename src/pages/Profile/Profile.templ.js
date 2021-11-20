@@ -1,4 +1,4 @@
-const Profile = `.page
+const ProfileTemplate = `.page
       aside.profile__back
         a.profile__backButton(href="../MainPage/index.pug")
       section.register
@@ -84,4 +84,4 @@ const Profile = `.page
           button.register__submit-button(type="submit") Изменить пароль 
           a.register__subtitle(href="#") Выйти`
 
-export default Profile
+export default ProfileTemplate

@@ -1,6 +1,4 @@
 import "./index.scss";
-
-
 import MainPage from "./pages/MainPage/MainPage";
 import NotFound from "./pages/NotFound/NotFound";
 import Profile from "./pages/Profile/Profile.js";
@@ -13,7 +11,7 @@ const path = window.location.pathname;
 
 switch (path) {
     case '/authorize':
- //       root.innerHTML = authorize();
+        root.innerHTML = authorize();
         break;
     case '/profile':
         root.innerHTML = Profile();
@@ -25,7 +23,7 @@ switch (path) {
         root.innerHTML = MainPage();
         break;
     case '/500':
-//        root.innerHTML = error({code: "500", message: "Мы уже фиксим"});
+        root.innerHTML = error({code: "500", message: "Мы уже фиксим"});
         break;
     default:
         root.innerHTML = NotFound();
