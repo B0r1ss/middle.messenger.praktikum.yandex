@@ -8,6 +8,7 @@ import Register from "./pages/Register/Register";
 const root = document.querySelector("#root");
 
 const path = window.location.pathname;
+console.log(path)
 
 switch (path) {
     case '/authorize':
