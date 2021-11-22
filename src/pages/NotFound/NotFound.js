@@ -1,7 +1,7 @@
-const pug = require('pug');
-import NotFound from "./NotFound.templ.js"
+import pug from "pug"
+import NotFoundTemplate from "./NotFound.templ.js"
 
-const compiledFunction = pug.compile(NotFound);
+const compiledFunction = pug.compile(NotFoundTemplate);
 
 export default function NotFound() {
   return compiledFunction()

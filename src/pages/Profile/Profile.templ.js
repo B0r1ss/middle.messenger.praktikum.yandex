@@ -1,10 +1,11 @@
-const Profile = `.page
+const ProfileTemplate = 
+`.page
       aside.profile__back
         a.profile__backButton(href="../MainPage/index.pug")
-      section.register
+      section.profile
         button.profile__avatar(type="button")
-        h2.profile__title Регистрация
-        form.register__form
+        h2.profile__title Иван
+        form.register__form.profile__form
           fieldset.register__fields
             p.register__input-name Почта
             input.register__input(
@@ -80,8 +81,8 @@ const Profile = `.page
             span.register__error
 
           span.register__submit-error
-          button.register__submit-button(type="submit") Изменить данные
-          button.register__submit-button(type="submit") Изменить пароль 
-          a.register__subtitle(href="#") Выйти`
+          button.profile__change-button(type="button") Изменить данные
+          button.profile__change-button(type="button") Изменить пароль 
+          a.profile__subtitle(href="#") Выйти`
 
-export default Profile
+export default ProfileTemplate

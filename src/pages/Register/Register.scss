@@ -92,11 +92,6 @@
     line-height: 11px;
     text-align: center;
     color: $style_main_color;
-    opacity: 1;
-    transition: opacity 0.3s;
-    &:hover {
-      opacity: .6;
-    }
   }
 }
 

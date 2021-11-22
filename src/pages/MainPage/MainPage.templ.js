@@ -1,4 +1,4 @@
-const MainPage = `
+const MainPageTemplate = `
 mixin message(img, text, time)
   li.chart__message
     if img
@@ -59,4 +59,4 @@ main.content
       button.chart__sendButton
 `
 
-export default MainPage
+export default MainPageTemplate
