@@ -11,19 +11,19 @@ const path = window.location.pathname;
 console.log(path)
 
 switch (path) {
-    case '/authorize':
+    case "/authorize":
         root.innerHTML = authorize();
         break;
-    case '/profile':
+    case "/profile":
         root.innerHTML = Profile();
         break;
-    case '/register':
+    case "/register":
         root.innerHTML = Register();
         break;
-    case '/chat':
+    case "/chat":
         root.innerHTML = MainPage();
         break;
-    case '/500':
+    case "/500":
         root.innerHTML = error({code: "500", message: "Мы уже фиксим"});
         break;
     default:
