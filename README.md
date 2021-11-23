@@ -12,7 +12,7 @@
 - запуск тестов `npm run test`
 
 ## Netlify
-
+ https://deploy-preview-11--keen-shirley-e0fce8.netlify.app/chat
 
 ## Процесс
 ### Спринт №1
