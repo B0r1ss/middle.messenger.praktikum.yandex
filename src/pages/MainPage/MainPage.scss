@@ -1,0 +1,276 @@
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 27%;
+  min-width: 190px;
+  height: 100vh;
+  border-right: solid 1px $border_color;
+  overflow-y: scroll;
+
+  &__profileLink {
+    margin: 21px 10px 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: right;
+    color: $background_text_color;
+  }
+  
+  &__profileLink_icon {
+    color: $background_text_color;
+  }
+  
+  &__searchInput {
+    width: calc(100% - 10px*2);
+    margin: 23px 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: $input_color;
+  
+    &::placeholder {
+      background-image: url(./images/search.svg);
+      background-repeat: no-repeat;
+      background-position: 30% center;
+      color: $background_text_color;
+      text-align: center;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $style_main_color;
+    }
+  }
+  
+  &__list {
+    list-style: none;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__listItem {
+    display: flex;
+    flex-direction: row;
+    border-top: solid 1px $border_color;
+    content: none;
+  }
+  
+  &__userImage {
+    margin: 12px 0;
+    border-radius: 100%;
+  }
+
+  &__userName {
+    margin: 12px auto 0 10px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    color: $main_text_color;
+  }
+  
+  &__userMassage {
+    margin: 4px auto 0 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $background_text_color;
+  }
+  
+  &__massageAttr {
+    margin: 12px 10px 12px auto;
+  }
+  
+  &__time {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    text-align: right;
+    color: $background_text_color;
+  }
+  
+  &__countNewMessage {
+    box-sizing: border-box;
+    color: $white;
+    background-color: $style_main_color;
+    border-radius: 50%;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  width: 73%;
+  padding: 0 20px;
+}
+
+.chart_empty {
+  margin: auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: $background_text_color;
+}
+
+.chart__header {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  border-bottom: solid 1px $border_color;
+}
+
+.chart__avatar {
+  width: 34px;
+  height: 34px;
+  background-color: $background_color;
+  border-radius: 50%;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.chart__username {
+  margin: auto auto auto 10px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+  color: $main_text_color;
+}
+
+.chart__buttonMore {
+  background: url('./images/button-menu.svg') center no-repeat;
+  margin: auto 0;
+  height: 15px;
+  width: 3px;
+  border: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.chart__meetingRoom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.chart__massDate {
+  justify-self: center;
+  margin-top: 48px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: $background_text_color;
+}
+
+.chart__message {
+  justify-self: flex-start;
+  margin: 10px 0;
+  padding: 11px;
+  max-width: 380px;
+}
+
+.chart__img {
+  max-width: 320px;
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.chart__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $main_text_color;
+}
+.chart__time {
+  position: relative;
+  left: 95%;
+  bottom: 5%;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 9px;
+  color: $background_text_color;
+}
+
+.chart__footer {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  padding: 10px 20px;
+  border-top: solid 1px $border_color;
+}
+
+.chart__addButton {
+  background: url('./images/button-add.svg') center no-repeat;
+  margin: auto 0;
+  height: 32px;
+  width: 32px;
+  border: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.chart__inputMessage {
+  margin: auto 0 auto 10px;
+  width: calc(100% - 60px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: $input_color;
+  text-align: left;
+  &:focus {
+    outline: none;
+    border: 1px solid $style_main_color;
+  }
+
+}
+
+.chart__sendButton {
+  background: url('./images/button-send.svg') center no-repeat;
+  margin: auto 0 auto 10px;
+  height: 32px;
+  width: 32px;
+  border: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
