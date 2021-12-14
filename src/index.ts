@@ -5,14 +5,14 @@ import NotFound from "./pages/NotFound/NotFound";
 import Profile from "./pages/Profile/Profile.js";
 import Register from "./pages/Register/Register";
 import Error from "./pages/Error/Error";
-import NotFound from "./pages/NotFound/NotFound";
 
 
-const root = document.querySelector("#root");
+const root: HTMLElement | null = document.querySelector("#root");
 
 const path = window.location.pathname;
 
-switch (path) {
+if(root) {
+  switch (path) {
     case "/authorize":
         root.innerHTML = Login();
         break;
@@ -30,5 +30,5 @@ switch (path) {
         break;
     default:
         root.innerHTML = NotFound();
-
-} 
+  }
+}
