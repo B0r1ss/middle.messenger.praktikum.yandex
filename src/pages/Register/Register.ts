@@ -1,5 +1,5 @@
 import pug from "pug";
-import RegisterTemplate from "./Register.templ.js";
+import RegisterTemplate from "./Register.templ";
 
 const compiledFunction = pug.compile(RegisterTemplate);
 

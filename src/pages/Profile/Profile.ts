@@ -1,5 +1,5 @@
 import pug from "pug"
-import ProfileTemplate from "./Profile.templ.js";
+import ProfileTemplate from "./Profile.templ";
 
 const compiledFunction = pug.compile(ProfileTemplate);
 

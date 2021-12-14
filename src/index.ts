@@ -2,7 +2,7 @@ import "./index.scss";
 import Login from "./pages/Login/Login";
 import MainPage from "./pages/MainPage/MainPage";
 import NotFound from "./pages/NotFound/NotFound";
-import Profile from "./pages/Profile/Profile.js";
+import Profile from "./pages/Profile/Profile";
 import Register from "./pages/Register/Register";
 import Error from "./pages/Error/Error";
 
@@ -14,7 +14,7 @@ const path = window.location.pathname;
 if(root) {
   switch (path) {
     case "/authorize":
-        root.innerHTML = Login();
+        root.appendChild(new Login().getContent());
         break;
     case "/profile":
         root.innerHTML = Profile();

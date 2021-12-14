@@ -1,8 +1,8 @@
 import pug from "pug";
 import Block from '../../utills/Block/Block';
-import {formTmpl} from './form.tmpl';
+import {formTempl} from './Form.templ';
 
-export class FormPiece extends Block {
+export class Form extends Block {
 	constructor(props: {
     name: string;
     label: string;
@@ -13,7 +13,8 @@ export class FormPiece extends Block {
 	}
 
 	render() {
-		const template = pug.compile(formTmpl);
+		const template = pug.compile(formTempl);
+    console.log(template(this.props))
 		return template(this.props);
 	}
 }

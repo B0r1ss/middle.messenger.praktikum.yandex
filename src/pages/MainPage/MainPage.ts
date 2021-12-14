@@ -1,5 +1,5 @@
 import pug from "pug";
-import MainPageTemplate from "./MainPage.templ.js";
+import MainPageTemplate from "./MainPage.templ";
 
 const compiledFunction = pug.compile(MainPageTemplate);
 
