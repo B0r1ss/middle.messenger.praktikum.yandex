@@ -72,9 +72,6 @@ export default class Login extends Block {
 
 	render() {
 		const template = pug.compile(LoginTemplate);
-        console.log(
-          template()
-        );
 		return template({
       loginInput: this.props.loginInput.render(),
       passwordInput: this.props.passwordInput.render(),
