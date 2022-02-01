@@ -14,7 +14,6 @@ export class Form extends Block {
 
 	render() {
 		const template = pug.compile(formTempl);
-    console.log(template(this.props))
 		return template(this.props);
 	}
 }

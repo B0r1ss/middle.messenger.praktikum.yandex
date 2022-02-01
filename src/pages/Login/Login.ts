@@ -8,33 +8,33 @@ import {validateInput} from '../../utills/validation';
 
 export default class Login extends Block {
 	constructor() {
-		super('div', {
-			loginInput: new Form({
-				name: 'login',
-				label: 'Логин',
-				type: 'text',
-			}),
-			passwordInput: new Form({
-				name: 'password',
-				label: 'Пароль',
-				type: 'password',
-			}),
-			authorizeButton: new Button({
-				id: 'authorizeButton',
-				text: 'Авторизоваться',
-				type: 'submit',
-				style: 'register__submit-button',
-			}),
-			registerButton: new Button({
-				id: 'registerButton',
-				text: 'Нет аккаунта?',
-				type: 'button',
-			}),
-			events: {
-				click: (event: Event) => this.clickHandler(event),
-				focusout: (event: Event) => this.validateOnBlur(event),
-			},
-		});
+		super("div", {
+      loginInput: new Form({
+        name: "login",
+        label: "Логин",
+        type: "text",
+      }),
+      passwordInput: new Form({
+        name: "password",
+        label: "Пароль",
+        type: "password",
+      }),
+      authorizeButton: new Button({
+        id: "authorizeButton",
+        text: "Авторизоваться",
+        type: "submit",
+        style: "register__submit-button",
+      }),
+      registerButton: new Button({
+        id: "registerButton",
+        text: "Нет аккаунта?",
+        type: "button",
+      }),
+      events: {
+        click: (event: Event) => this.clickHandler(event),
+        focusout: (event: Event) => this.validateOnBlur(event),
+      },
+    });
 	}
 
 	validateOnBlur(event: Event) {
@@ -49,6 +49,8 @@ export default class Login extends Block {
 	}
 
 	clickHandler(event: Event) {
+      console.log(event);
+
 		if (
 			event.target
       === document.getElementById(this.props.authorizeButton.props.id)
@@ -70,11 +72,13 @@ export default class Login extends Block {
 
 	render() {
 		const template = pug.compile(LoginTemplate);
+        console.log(
+          template()
+        );
 		return template({
-			loginInput: this.props.loginInput.render(),
-			passwordInput: this.props.passwordInput.render(),
-			authorizeButton: this.props.authorizeButton.render(),
-			registerButton: this.props.registerButton.render(),
-		});
+      loginInput: this.props.loginInput.render(),
+      passwordInput: this.props.passwordInput.render(),
+      authorizeButton: this.props.authorizeButton.render(),
+    });
 	}
 }

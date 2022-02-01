@@ -16,7 +16,6 @@ export class Button extends Block {
 
 	render() {
 		const template = pug.compile(buttonTempl);
-    console.log(template(this.props))
 		return template(this.props);
 	}
 }

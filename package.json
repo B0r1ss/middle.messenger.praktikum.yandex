@@ -4,6 +4,7 @@
   "description": "messenger",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . && stylelint **/*.scss",
     "start": "parcel build src/index.pug && node ./server.js",
     "build": "parcel build src/index.pug",
     "dev": "parcel src/index.pug --open"
@@ -26,11 +27,14 @@
     "@parcel/transformer-sass": "^2.0.1",
     "autoprefixer": "^10.4.0",
     "cssnano": "^5.0.10",
+    "eslint-config-airbnb": "^19.0.4",
     "express": "^4.17.1",
     "parcel": "^2.0.1",
     "postcss": "^8.3.11",
     "pug": "^3.0.2",
     "sass": "^1.43.4",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-scss": "^4.1.0",
     "ts-node": "^10.4.0"
   }
 }

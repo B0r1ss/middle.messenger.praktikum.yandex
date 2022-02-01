@@ -1,4 +1,4 @@
 const buttonTempl = `
-button.style(id=id type=type) #{buttonText}
+button(id=id type=type class=style) #{text}
 `;
 export default buttonTempl
