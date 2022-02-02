@@ -2,7 +2,7 @@ import pug from "pug";
 import LoginTemplate from "./Login.templ";
 
 import Block from '../../utills/Block/Block';
-import {Button} from '../../components/button/button';
+import {Button} from '../../components/Button/Button';
 import {Form} from '../../components/Form/Form';
 import {validateInput} from '../../utills/validation';
 
