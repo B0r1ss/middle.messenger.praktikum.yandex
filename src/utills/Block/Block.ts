@@ -1,4 +1,4 @@
-import EventBus from '../EventBus/eventBus';
+import EventBus from '../EventBus/EventBus';
 
 export default class Block {
 	static EVENTS = {
