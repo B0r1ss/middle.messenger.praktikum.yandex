@@ -49,8 +49,7 @@ export default class Login extends Block {
 	}
 
 	clickHandler(event: Event) {
-      console.log(event);
-
+    event.preventDefault()
 		if (
 			event.target
       === document.getElementById(this.props.authorizeButton.props.id)
@@ -58,13 +57,16 @@ export default class Login extends Block {
 			const form = document.forms.namedItem('formLogin');
 			const formData: { [key: string]: string } = {};
 			const formDataArray = Array.from(form!.elements) as HTMLInputElement[];
+                console.log(formDataArray);
 			formDataArray.forEach(element => {
+        console.log(element.id)
 				validateInput({
 					value: element.value,
 					type: element.name,
 					errorMsgSelecor: `${element.id}ErrMessage`,
 				});
 				formData[element.id] = element.value;
+        console.log(formData)
 			});
 			console.log(formData);
 		}

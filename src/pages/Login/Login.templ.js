@@ -3,7 +3,7 @@ div.page
   section.register
     h2.register__title Рады видеть!
     form.register__form(name="formLogin")
-      fieldset.register__fields
+      .register__fields
         | !{loginInput}
         | !{passwordInput}
       span.register__submit-error

@@ -26,3 +26,10 @@
 
 https://github.com/B0r1ss/middle.messenger.praktikum.yandex/pull/1
 
+## Спринт №2
+- макеты прототипов экрана были взяты из https://www.figma.com/file/24EUnEHGEDNLdOcxg7ULwV/Chat?node-id=0%3A1
+- внедрен TypeScript
+- внедрены паттерны программирования
+- настроена раздача статики на Netlify
+
+https://github.com/B0r1ss/middle.messenger.praktikum.yandex/pull/2
