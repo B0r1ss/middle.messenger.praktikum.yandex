@@ -32,4 +32,4 @@ https://github.com/B0r1ss/middle.messenger.praktikum.yandex/pull/1
 - внедрены паттерны программирования
 - настроена раздача статики на Netlify
 
-https://github.com/B0r1ss/middle.messenger.praktikum.yandex/pull/2
+https://github.com/B0r1ss/middle.messenger.praktikum.yandex/pull/12
