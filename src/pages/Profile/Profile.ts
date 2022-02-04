@@ -1,7 +1,7 @@
-import pug from "pug"
+import {compile} from "pug";
 import ProfileTemplate from "./Profile.templ";
 
-const compiledFunction = pug.compile(ProfileTemplate);
+const compiledFunction = compile(ProfileTemplate);
 
 export default function Profile() {
   return compiledFunction()

@@ -25,6 +25,7 @@
   "devDependencies": {
     "@parcel/transformer-pug": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
+    "@types/pug": "^2.0.6",
     "autoprefixer": "^10.4.0",
     "cssnano": "^5.0.10",
     "eslint": "^8.8.0",

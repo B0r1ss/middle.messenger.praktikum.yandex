@@ -1,4 +1,4 @@
-const MainPageTemplate = `
+const MainPageTemplate: string = `
 mixin message(img, text, time)
   li.chart__message
     if img

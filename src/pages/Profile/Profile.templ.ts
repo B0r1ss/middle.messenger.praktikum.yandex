@@ -1,4 +1,4 @@
-const ProfileTemplate = 
+const ProfileTemplate: string = 
 `.page
       aside.profile__back
         a.profile__backButton(href="../MainPage/index.pug")

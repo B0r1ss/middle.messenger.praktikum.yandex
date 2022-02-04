@@ -1,11 +1,11 @@
-import pug from "pug";
+import {compile} from "pug";
 import ErrorTemplate from "./Error.templ.js";
 
-const compiledFunction = pug.compile(ErrorTemplate);
+const compiledFunction = compile(ErrorTemplate);
 
-export default function Error({code, message}) {
+export default function Error({code, message}: {[key: string]: string}) {
   return compiledFunction({
-    code: code, 
+    code: code,
     message: message,
   })
 }

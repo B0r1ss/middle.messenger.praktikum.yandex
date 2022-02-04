@@ -1,4 +1,4 @@
-const NotFoundTemplate = `
+const NotFoundTemplate: string = `
 .page
   .container
     h1.error__digit 404

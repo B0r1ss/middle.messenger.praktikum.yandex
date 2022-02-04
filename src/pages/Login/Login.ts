@@ -1,4 +1,4 @@
-import pug from "pug";
+import {compile} from "pug";
 import LoginTemplate from "./Login.templ";
 
 import Block from '../../utills/Block/Block';
@@ -73,7 +73,7 @@ export default class Login extends Block {
 	}
 
 	render() {
-		const template = pug.compile(LoginTemplate);
+		const template = compile(LoginTemplate);
 		return template({
       loginInput: this.props.loginInput.render(),
       passwordInput: this.props.passwordInput.render(),

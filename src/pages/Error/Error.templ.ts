@@ -1,4 +1,4 @@
-const ErrorTemplate = `.page
+const ErrorTemplate: string = `.page
   .container
     h1.error__digit #{code}
     h2.error__text #{message}

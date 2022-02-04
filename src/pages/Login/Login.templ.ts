@@ -1,4 +1,4 @@
-const LoginTemplate = `
+const LoginTemplate: string = `
 div.page
   section.register
     h2.register__title Рады видеть!
