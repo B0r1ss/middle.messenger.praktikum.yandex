@@ -8,6 +8,7 @@
 
 .register {
   margin: auto;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -84,13 +85,23 @@
   }
   
   &__subtitle {
+    display: block;
+    margin: 14px auto auto auto;
+    text-align: center;
     text-decoration: none;
-    margin-top: 14px;
     font-weight: 500;
     font-size: 11px;
     line-height: 11px;
-    text-align: center;
     color: $style_main_color;
+  }
+
+  &__error {
+    margin: 7px auto 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 8px;
+    color: $text_warn;
   }
 }
 
