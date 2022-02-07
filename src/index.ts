@@ -20,7 +20,7 @@ if(root) {
         root.innerHTML = Profile();
         break;
     case "/register":
-        root.innerHTML = Register();
+        root.appendChild(new Register().getContent());
         break;
     case "/chat":
         root.innerHTML = MainPage();

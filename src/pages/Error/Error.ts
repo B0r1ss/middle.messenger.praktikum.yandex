@@ -1,5 +1,5 @@
 import {compile} from "pug";
-import ErrorTemplate from "./Error.templ.js";
+import ErrorTemplate from "./Error.templ";
 
 const compiledFunction = compile(ErrorTemplate);
 

@@ -7,8 +7,8 @@ import {Form} from '../../components/Form/Form';
 import {validateInput} from '../../utills/validation';
 
 export default class Login extends Block {
-	constructor() {
-		super("div", {
+  constructor () {
+    super("div", {
       loginInput: new Form({
         name: "login",
         label: "Логин",
@@ -35,49 +35,47 @@ export default class Login extends Block {
         focusout: (event: Event) => this.validateOnBlur(event),
       },
     });
-	}
+  }
 
-	validateOnBlur(event: Event) {
-		const eventTarget = <HTMLInputElement>event.target;
-		if (eventTarget.nodeName === 'INPUT') {
-			validateInput({
-				value: eventTarget.value,
-				type: eventTarget.name,
-				errorMsgSelecor: `${eventTarget.id}ErrMessage`,
-			});
-		}
-	}
+  validateOnBlur(event: Event) {
+    const eventTarget = <HTMLInputElement>event.target;
+    if (eventTarget.nodeName === 'INPUT') {
+      validateInput({
+        value: eventTarget.value,
+        type: eventTarget.name,
+        errorMsgSelecor: `${eventTarget.name}ErrMessage`,
+      });
+    }
+  }
 
-	clickHandler(event: Event) {
+  clickHandler(event: Event) {
     event.preventDefault()
-		if (
-			event.target
+    if (
+      event.target
       === document.getElementById(this.props.authorizeButton.props.id)
-		) {
-			const form = document.forms.namedItem('formLogin');
-			const formData: { [key: string]: string } = {};
-			const formDataArray = Array.from(form!.elements) as HTMLInputElement[];
-                console.log(formDataArray);
-			formDataArray.forEach(element => {
-        console.log(element.id)
-				validateInput({
-					value: element.value,
-					type: element.name,
-					errorMsgSelecor: `${element.id}ErrMessage`,
-				});
-				formData[element.id] = element.value;
-        console.log(formData)
-			});
-			console.log(formData);
-		}
-	}
+    ) {
+      const form = document.forms.namedItem('formLogin');
+    const formData: { [key: string]: string } = {};
+    const formDataArray = Array.from(form!.elements) as HTMLInputElement[];
+    formDataArray.forEach(element => {
+      validateInput({
+        value: element.value,
+        type: element.name,
+        errorMsgSelecor: `${element.name}ErrMessage`,
+      });
+      formData[element.id] = element.value;
+      console.log(formData)
+    });
+    console.log(formData);
+    }
+  }
 
-	render() {
-		const template = compile(LoginTemplate);
-		return template({
+  render() {
+    const template = compile(LoginTemplate);
+    return template({
       loginInput: this.props.loginInput.render(),
       passwordInput: this.props.passwordInput.render(),
       authorizeButton: this.props.authorizeButton.render(),
     });
-	}
+  }
 }

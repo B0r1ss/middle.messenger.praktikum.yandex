@@ -27,46 +27,49 @@ export default class HTTPTransport {
   get = (url: string, options: Options = {}) =>
     this.request(url, {...options, method: METHODS.GET}, options.timeout);
 
-	put = (url: string, options: Options = {}) =>
-		this.request(url, {...options, method: METHODS.PUT}, options.timeout);
+  put = (url: string, options: Options = {}) =>
+    this.request(url, {...options, method: METHODS.PUT}, options.timeout);
 
-	post = (url: string, options: Options = {}) =>
-		this.request(url, {...options, method: METHODS.POST}, options.timeout);
+  post = (url: string, options: Options = {}) =>
+    this.request(url, {...options, method: METHODS.POST}, options.timeout);
 
-	delete = (url: string, options: Options = {}) =>
-		this.request(url, {...options, method: METHODS.DELETE}, options.timeout);
+  delete = (url: string, options: Options = {}) =>
+    this.request(url, {...options, method: METHODS.DELETE}, options.timeout);
 
-	request(url: string, options: Options, timeout: number = 5000) {
-		const {method = METHODS.GET, headers = {}, data = {}} = options;
+  request(url: string, options: Options, timeout: number = 5000) {
+    const {method = METHODS.GET, headers = {}, data = {}} = options;
 
-		return new Promise((resolve, reject) => {
-			const xhr = new XMLHttpRequest();
-			xhr.open(
-				method,
-				method === METHODS.GET && Boolean(data)
-					? `${url}${queryStringify(data)}`
-					: url,
-			);
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open(
+        method,
+        method === METHODS.GET && Boolean(data)
+          ? `${url}${queryStringify(data)}`
+          : url,
+      );
 
-			Object.keys(headers).forEach(key => {
-				xhr.setRequestHeader(key, headers[key]);
-			});
+      Object.keys(headers).forEach(key => {
+        xhr.setRequestHeader(key, headers[key]);
+      });
 
-			xhr.onload = function () {
-				resolve(xhr);
-			};
+      xhr.onload = function () {
+        if (xhr.status !== 200) {
+          reject;
+        }
+        resolve(xhr);
+      };
 
-			xhr.onabort = reject;
-			xhr.onerror = reject;
-			xhr.timeout = timeout;
-			xhr.ontimeout = reject;
+      xhr.onabort = reject;
+      xhr.onerror = reject;
+      xhr.timeout = timeout;
+      xhr.ontimeout = reject;
 
-			if (method === METHODS.GET || !data) {
-				xhr.send();
-			} else {
-				// @ts-ignore
-				xhr.send(data);
-			}
-		});
-	}
+      if (method === METHODS.GET || !data) {
+        xhr.send();
+      } else {
+        // @ts-ignore
+        xhr.send(data);
+      }
+    });
+  }
 }

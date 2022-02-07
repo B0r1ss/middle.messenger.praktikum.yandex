@@ -8,6 +8,9 @@ div.page
         | !{passwordInput}
       span.register__submit-error
       | !{authorizeButton}
-      a.register__subtitle(href="../Register/Register.pug") Нет аккаунта?`;
+      a.register__subtitle(
+        href="/register"
+        target="_blank"
+        rel="noopener noreferrer") Нет аккаунта?`;
 
 export default LoginTemplate;

@@ -5,6 +5,8 @@ input.register__input(
   name=name
   action="#"
 )
-span.register__error #{message}
+span.register__error(
+  id=name + "ErrMessage"
+) #{message}
 `;
 export {formTempl};
