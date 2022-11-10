@@ -8,6 +8,7 @@ export class Form extends Block {
     label: string;
     type: string;
     message?: string;
+    style?: string;
   }) {
 		super('div', props);
 	}

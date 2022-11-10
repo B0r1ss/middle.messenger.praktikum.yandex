@@ -54,7 +54,7 @@ export default class Login extends Block {
       event.target
       === document.getElementById(this.props.authorizeButton.props.id)
     ) {
-      const form = document.forms.namedItem('formLogin');
+    const form = document.forms.namedItem('formLogin');
     const formData: { [key: string]: string } = {};
     const formDataArray = Array.from(form!.elements) as HTMLInputElement[];
     formDataArray.forEach(element => {

@@ -47,16 +47,16 @@ main.content
     .chart__header
       img.chart__avatar(src="avatar.svg", alt="Мой аватар")
       h4.chart__username Boriss
-      button.chart__buttonMore(type="button")
+      | !{moreProfileButton}
     ul.chart__meetingRoom
       h4.chart__massDate 10 ноября
       +message("./images/mess-pic.png", "", "10:55")
       +message("", "Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель", "10:55")
       +message("", "Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель", "10:55")
     .chart__footer
-      button.chart__addButton(type="button")
+      | !{addPropButton}
       input.chart__inputMessage(type="text" name="message")
-      button.chart__sendButton(type="button")
-`
+      | !{sendMessageButton}
+`;
 
 export default MainPageTemplate
