@@ -1,19 +1,25 @@
-import "./index.scss";
-import Login from "./pages/Login/Login";
-import MainPage from "./pages/MainPage/MainPage";
-import NotFound from "./pages/NotFound/NotFound";
-import Profile from "./pages/Profile/Profile";
-import Register from "./pages/Register/Register";
-import Error from "./pages/Error/Error";
-import Router from "./utills/Router/Router";
+import "./app.less";
+import "./reset.less";
+import LoginPage from "./pages/login";
+import RegistrationPage from "./pages/registration";
+import ChatPage from "./pages/chat";
+import ChangePassword from "./pages/changePassword";
+import { Router } from "./core/Router";
+import Block from "./core/Block";
+import Store from "./core/Store";
+import { ChangeAvatar } from "./pages/changeAvatar";
+import ProfilePage from "./pages/profilepage";
+import ProfilePageEdit from "./pages/profileedit";
 
-const router = new Router("root");
-
-router
-  .use("/sign-up", Register)
-  .use("/", Login)
-  .use("/settings", Profile)
-  .use("/messenger", MainPage)
-  .use("/500", Error)
-  .use("/404", NotFound)
-  .start();
+document.addEventListener("DOMContentLoaded", () => {
+  const router = new Router();
+  const store = new Store();
+  router.use("/", LoginPage as unknown as Block);
+  router.use("/registration", RegistrationPage as unknown as Block);
+  router.use("/profilePage", ProfilePage as unknown as Block);
+  router.use("/settings", ProfilePageEdit as unknown as Block);
+  router.use("/changePassword", ChangePassword as unknown as Block);
+  router.use("/messenger", ChatPage as unknown as Block);
+  router.use("/changeAvatar", ChangeAvatar as unknown as Block);
+  router.start();
+});

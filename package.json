@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . && stylelint **/*.scss",
     "start": "parcel build src/index.pug && node ./server.js",
-    "build": "parcel build src/index.pug",
-    "dev": "parcel src/index.pug --open"
+    "build": "parcel build  ./src/index.html ",
+    "dev": "parcel ./src/index.html   --open --no-cache"
   },
   "repository": {
     "type": "git",
@@ -63,4 +63,3 @@
   }
 }
 
-}
